@@ -57,3 +57,12 @@ fig = MP.plot_mesh(TM.active_vertex_coordinates(mesh), TM.active_triangle_connec
 fig.tight_layout()
 fig.savefig("figures/triangle-collapse1.png")
 ##
+
+##
+mesh = make_test_mesh()
+vs = [1,1,-1,-1]
+fig = MP.plot_mesh(TM.active_vertex_coordinates(mesh), TM.active_triangle_connectivity(mesh),
+vertex_score = vs, vertex_size = 50, fontsize = 30)
+fig.tight_layout()
+fig.savefig("figures/triangle/vertex-irregularity")
+##
